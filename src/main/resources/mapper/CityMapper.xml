@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mvnsearch.mybatis.jpaStyle.repository.CityRepository">
+
+    <resultMap id="CityResultMap" type="City">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="state" column="state"/>
+        <result property="country" column="country"/>
+        <result property="createdAt" column="created_at"/>
+    </resultMap>
+
+    <select id="findById" resultMap="CityResultMap" parameterType="int">
+        select *
+        from city
+        where ID = #{id:INTEGER}
+    </select>
+
+</mapper>
