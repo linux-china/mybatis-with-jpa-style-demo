@@ -27,7 +27,11 @@ And I write the JPA interface and relate interface api with MyBatis sentence.
 
 * If you want to enable JPA auto configuration, just add spring-boot-starter-data-jpa
 * IntelliJ IDEA has good support for JPA, and it's very convenient to write JPA interface.
+* H2 Connection setup in IntelliJ IDEA with Flyway support
 
+```
+jdbc:h2:mem:public;MODE=MYSQL;DATABASE_TO_UPPER=false;INIT=runscript from '/Users/xxx/IdeaProjects/mybatis-with-jpa-style-demo/src/test/resources/db/migration/V1__city.sql'\;runscript from '/Users/xxx/IdeaProjects/mybatis-with-jpa-style-demo/src/test/resources/db/migration/V2__account.sql'
+```
 
 # References
 
